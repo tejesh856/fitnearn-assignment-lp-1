@@ -1,13 +1,48 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: #171717;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+#root {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+.radial-gradient {
+  background: radial-gradient(
+    circle,
+    rgba(219, 39, 119, 0.12) 0%,
+    rgba(249, 115, 22, 0.12) 100%
+  );
+}
+.inner-circle-shadow {
+  box-shadow: 0px 2px 4px 0px #000000, 0px -2px 4px 0px #000000;
+}
+.carousel-container {
+  width: 100%;
+  max-width: 320px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  min-width: 100%;
+  transition: opacity 1s ease-in-out; /* Apply fade transition */
+}
+
+.card.opacity-0 {
+  opacity: 0;
+}
+
+.card.opacity-100 {
+  opacity: 1;
 }
